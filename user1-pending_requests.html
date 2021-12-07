@@ -37,19 +37,19 @@
                         <li class="sidebar-title">Menu</li>
 
                         <li class="sidebar-item">
-                            <a href="manage-customers.html" class='sidebar-link'>
+                            <a href="user1-manage_customers.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Manage Customers</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a href="pending-requests.html" class='sidebar-link'>
+                        <li class="sidebar-item active">
+                            <a href="user1-pending_requests.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Pending Requests</span>
                             </a>
                         </li>
-                        <li class="sidebar-item active">
-                            <a href="issues.html" class='sidebar-link'>
+                        <li class="sidebar-item ">
+                            <a href="user1-issues.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Issues</span>
                             </a>
@@ -68,7 +68,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Issues</h3>
+                <h3>Pending Requests</h3>
             </div>
            
             <div class="page-content">
@@ -82,37 +82,47 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Name</th>
-                                                        <th></th>
+                                                        <th>Date</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="col-7">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="assets/images/faces/5.jpg">
+                                                        <td class="col-8">
+                                                            <a href="user1-manage_customer.html">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="avatar avatar-md">
+                                                                        <img src="assets/images/faces/5.jpg">
+                                                                    </div>
+                                                                    <p class="font-bold ms-3 mb-0">Si Cantik</p>
                                                                 </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Cantik&emsp;</p>
-                                                            </div>
+                                                                </a>
                                                         </td>
-                                                        <td class="col-5">
-                                                            <a href="#" class="btn btn-outline-danger">Can't be solved</a>
-                                                            <a href="#" class="btn btn-outline-success">Solved</a>
+                                                        <td>
+                                                            <p class=" mb-0">07/12/2020</p>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-outline-danger">Decline</a>
+                                                            <a href="#" class="btn btn-outline-success">Accept</a>
                                                         </td>
                                                        
                                                     </tr>
                                                     <tr>
-                                                        <td class="col-7">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="assets/images/faces/2.jpg">
+                                                        <td class="col-8">
+                                                            <a href="user1-manage_customer.html">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="avatar avatar-md">
+                                                                        <img src="assets/images/faces/2.jpg">
+                                                                    </div>
+                                                                    <p class="font-bold ms-3 mb-0">Si ioakim</p>
                                                                 </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Ganteng&emsp;</p>
-                                                            </div>
+                                                                </a>
                                                         </td>
-                                                        <td class="col-5">
-                                                            <a href="#" class="btn btn-outline-danger">Can't be solved</a>
-                                                            <a href="#" class="btn btn-outline-success">Solved</a>
+                                                        <td>
+                                                            <p class=" mb-0">10/05/2021</p>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-outline-danger">Decline</a>
+                                                            <a href="#" class="btn btn-outline-success">Accept</a>
                                                         </td>
                                                        
                                                     </tr>
@@ -126,6 +136,10 @@
                     </div>
                    
                 </section>
+
+                
+
+
             </div>
 
             <footer>
@@ -137,13 +151,13 @@
             </footer>
         </div>
     </div>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    
+</body>
+<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/pages/dashboard.js"></script>
 
     <script src="assets/js/main.js"></script>
-</body>
-
 </html>

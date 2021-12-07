@@ -1,177 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-</style>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User 2 Edit Reservation</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-
-    <link rel="stylesheet" href="assets/vendors/choices.js/choices.min.css" />
-
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
-</head>
-
-<body>
-    <div id="app">
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
-
-            <div class="page-heading">
-                
-                <section class="section">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Edit reservation</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <label class="input-group-text"
-                                                for="inputGroupSelect01">Date</label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Choose...</option>
-                                                <option selected value="1">30/11/21</option>
-                                                <option value="2">01/12/21</option>
-                                                <option value="3">02/12/21</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <label class="input-group-text"
-                                                for="inputGroupSelect01">Time</label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Choose...</option>
-                                                <option value="1">20:00</option>
-                                                <option selected value="2">21:30</option>
-                                                <option value="3">22:00 </option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="basicInput">Name</label>
-                                        <input type="text" class="form-control" id="basicInput" value="Giorkos">
-                                    </div>
-                                    <div class="card">
-                                       
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-md-6 mb-4">
-                                                        <h6>People</h6>
-                                                        <fieldset class="form-group">
-                                                            <select class="form-select" id="basicSelect">
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>3</option>
-                                                                <option>4</option>
-                                                                <option>5</option>
-                                                                <option selected>6</option>
-                                                                <option>7</option>
-                                                                <option>8</option>
-                                                                <option>9</option>
-                                                                <option>10</option>
-                                                                <option>11</option>
-                                                                <option>12</option>
-                                                            </select>
-                                                        </fieldset>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card">
-                                       
-                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                    rows="3" >Near the bar</textarea>
-                                    </div>
-                                    <div class="card">
-
-                                        <h5>Front of House</h5>
-                                    <div class="form-group">
-                                        <label for="basicInput">Area/Table</label>
-                                        <input type="text" class="form-control" id="basicInput" value="15">
-                                    </div>
-                                    
-
-                                    <!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -187,13 +16,19 @@
 
 <body>
 <div class="container-fluid text-center">
+    <form action="user1-manage_customer.html">
+        <button style="margin:10px;"> Back</button> 
+    </form>
+    <form action="user1-manage_customer.html">
+        <button style="margin:10px;"> Save Changes</button> 
+    </form>
     <div class="form-group admin-menu">
       <div class="row">
-        <div class="col-sm-3 col-sm-offset-3 form-group">
+        <div class="col-sm-2 col-sm-offset-3 form-group">
           <label>Width (px)</label>
           <input type="number" id="width" class="form-control" value="302" />
         </div>
-        <div class="col-sm-3 form-group">
+        <div class="col-sm-2 form-group">
           <label>Height (px)</label>
           <input type="number" id="height" class="form-control" value="812" />
         </div>
@@ -793,59 +628,3 @@ function addDefaultObjects() {
 addDefaultObjects()
 
 </script>
-
-                                    </div>
-                                </div>
-                               
-                            </div>
-                            <div class="popup">
-                              <div class="popup" onclick="myFunction()">
-                                <form >
-                                  <input type="button" value="Edit reservation" />
-                                </form>
-                                <span class="popuptext" id="myPopup">Succesfully edited! Resv ID = #818181</span>
-                              </div>
-                                
-                                
-                            </div>
-                            <form action="user2-manage_reservations.html">
-                              <input type="submit" value="Go Back" />
-                           </form>
-                           
-
-                        </div>
-                        
-                    </div>
-                </section>
-
-               
-
-            </div>
-
-            
-            <footer>
-                
-            </footer>
-        </div>
-    </div>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/main.js"></script>
-
-    <script src="assets/vendors/choices.js/choices.min.js"></script>
-
-    <script src="assets/js/main.js"></script>
-
-    <script>
-      // When the user clicks on <div>, open the popup
-      function myFunction() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-      }
-      </script>
-
-
-</body>
-
-</html>
