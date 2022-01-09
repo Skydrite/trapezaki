@@ -57,6 +57,46 @@
     <script src="assets/js/main.js"></script>
 </body>
         <div id="main">
+            <div id="sidebar" class="active">
+                <div class="sidebar-wrapper active">
+                    <div class="sidebar-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            </div>
+                            <div class="toggler">
+                                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul class="menu">
+                            <li class="sidebar-title">Menu</li>
+    
+                            <li class="sidebar-item">
+                                <a href="user3-reservations.html" class='sidebar-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>My Reservations</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="user3-profile.html" class='sidebar-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item active">
+                                <a href="user3-search.html" class='sidebar-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>Make a Reservation</span>
+                                </a>
+                            </li>
+    
+                        </ul>
+                    </div>
+                    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+                </div>
+            </div>
             <header class="mb-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
                     <i class="bi bi-justify fs-3"></i>
@@ -83,8 +123,8 @@
                                             
                                             
                                         </div>
-                                        <form action="user3-contact.html">
-                                            <input type="button" value="Go Back" style="float: right;">
+                                        <form action="user3-search.html">
+                                            <input class="btn btn-primary" type="button" value="Go Back" style="float: right;">
                                         </form>
                                         <div class="card">
                                             <div class="card-header">
@@ -98,6 +138,17 @@
                                                 quibusdam ratione ullam!
                                                 
                                             </div>
+                                        </div>
+                                        <div class="col-sm-12 d-flex justify-content-start">
+                                            <form action="user3-contact.html">
+                                                <button class="btn btn-primary" style="margin:5px;">Contact</button> 
+                                            </form>
+                                            <form action="user3-book.html">
+                                                <button class="btn btn-primary" style="margin:5px;"> Book Now</button> 
+                                            </form>
+                                            
+                                            <button class="btn btn-primary" style="margin:5px;">Menu</button> 
+                                            </form>
                                         </div>
                                         <div class="card-header">
                                             <h4 class="card-title">Photos</h4>
@@ -144,17 +195,7 @@
                     
                 </div>
                 
-                <div class="col-sm-12 d-flex justify-content-start">
-                    <form action="user3-contact.html">
-                        <button style="margin:5px;">Contact</button> 
-                    </form>
-                    <form action="user3-book.html">
-                        <button style="margin:5px;"> Book Now</button> 
-                    </form>
-                    
-                    <button style="margin:5px;">Menu</button> 
-                    </form>
-                </div>
+                
             </div>
             </footer>
         </div>
