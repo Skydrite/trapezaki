@@ -8,14 +8,14 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
 
-    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="../assets/vendors/iconly/bold.css">
 
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -23,44 +23,18 @@
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
                 <div class="sidebar-header">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-center">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="index.html"><img src="../assets/images/logo/logo.png" alt="Trapezaki" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="sidebar-menu">
-                    <ul class="menu">
-                        <li class="sidebar-title">Menu</li>
-
-                        <li class="sidebar-item active">
-                            <a href="user3-reservations.html" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>My Reservations</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="user3-profile.html" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>My Profile</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item ">
-                            <a href="user3-search.html" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Make a Reservation</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+                
             </div>
         </div>
-        
         <div id="main">
             <header class="mb-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
@@ -68,6 +42,14 @@
                 </a>
             </header>
 
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="user3-profile.html">My Profile</a></li>
+                        <li class="breadcrumb-item"><a href="user3-search.html">Search</a></li>
+                    </ol>
+                </nav>
+            </div>
 
             <div class="page-heading">
                 <h3>My Reservations</h3>
@@ -83,10 +65,14 @@
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="input-group mb-3">
-                                    
-                                        <div class="col-md-16 mb-1">Date
-                                            <input type="date" value="2017-06-01">
-                                            </div>
+                                    <label class="input-group-text"
+                                        for="inputGroupSelect01">Date</label>
+                                    <select class="form-select" id="inputGroupSelect01">
+                                        <option selected>Choose...</option>
+                                        <option value="1">30/11/21</option>
+                                        <option value="2">01/12/21</option>
+                                        <option value="3">02/12/21</option>
+                                    </select>
                                 </div>
                             </div>
                             <!-- Hoverable rows start -->
@@ -191,16 +177,16 @@
             </footer>
         </div>
     </div>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="assets/js/pages/dashboard.js"></script>
+    <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="../assets/js/pages/dashboard.js"></script>
 
-    <script src="assets/vendors/rater-js/rater-js.js"></script>
-    <script src="assets/js/extensions/rater-js.js"></script>
+    <script src="../assets/vendors/rater-js/rater-js.js"></script>
+    <script src="../assets/js/extensions/rater-js.js"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

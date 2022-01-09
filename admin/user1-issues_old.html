@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>Issues</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+
+
 </head>
 
 <body>
@@ -43,13 +45,13 @@
                                 <span>Manage Customers</span>
                             </a>
                         </li>
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a href="user1-pending_requests.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Pending Requests</span>
                             </a>
                         </li>
-                        <li class="sidebar-item ">
+                        <li class="sidebar-item active">
                             <a href="user1-issues.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Issues</span>
@@ -69,12 +71,12 @@
             </header>
 
             <div class="page-heading">
-                <h3>Pending Requests</h3>
+                <h3>Issues</h3>
             </div>
 
             <div class="page-content">
                 <section class="row">
-                    <div class="col-12 col-lg-9">
+                    <div class="col-10 col-lg-10">
                         <div class="row">
                         </div>
                         <div class="card-body">
@@ -84,11 +86,13 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Date</th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="col-8">
+                                            <td class="col-5">
                                                 <a href="user1-manage_customer.html">
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar avatar-md">
@@ -98,32 +102,29 @@
                                                     </div>
                                                 </a>
                                             </td>
-                                            <td>
-                                                <p class=" mb-0">07/12/2020</p>
+                                            <td>5/10/2020</td>
+                                            <td class="col-7">
+                                                <a href="#" class="btn btn-outline-danger">Can't be solved</a>
+                                                <a href="#" class="btn btn-outline-success">Solved</a>
                                             </td>
-                                            <td class="d-flex flex-nowrap">
-                                                <a href="#" class="btn btn-outline-danger">Decline</a>
-                                                <a href="#" class="btn btn-outline-success">Accept</a>
-                                            </td>
+
 
                                         </tr>
                                         <tr>
-                                            <td class="col-8">
-                                                <a href="user1-manage_customer.html">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar avatar-md">
-                                                            <img src="../assets/images/faces/2.jpg">
-                                                        </div>
-                                                        <p class="font-bold ms-3 mb-0">Si ioakim</p>
+                                            <td class="col-5">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-md">
+                                                        <img src="../assets/images/faces/2.jpg">
                                                     </div>
-                                                </a>
+                                                    <p class="font-bold ms-3 mb-0">Si Ganteng</p>
+                                                </div>
                                             </td>
-                                            <td>
-                                                <p class=" mb-0">10/05/2021</p>
-                                            </td>
-                                            <td class="d-flex flex-nowrap">
-                                                <a href="#" class="btn btn-outline-danger">Decline</a>
-                                                <a href="#" class="btn btn-outline-success">Accept</a>
+
+                                            <td>5/10/2020</td>
+
+                                            <td class="col-7">
+                                                <a href="#" class="btn btn-outline-danger">Can't be solved</a>
+                                                <a href="#" class="btn btn-outline-success">Solved</a>
                                             </td>
 
                                         </tr>
@@ -132,34 +133,33 @@
                             </div>
                         </div>
                     </div>
+                </section>
             </div>
         </div>
     </div>
 
-    </section>
 
 
-
-
-    </div>
 
     <footer>
         <div class="footer clearfix mb-0 text-muted">
             <div class="float-start">
-                <p>2021 &copy; Mazer</p>
+                <p>2021 &copy; Trapezaki</p>
             </div>
         </div>
     </footer>
     </div>
     </div>
+    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
+    <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="../assets/js/pages/dashboard.js"></script>
+
+    <script src="../assets/js/extensions/sweetalert2.js"></script>
+    <script src="../assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
+
+    <script src="../assets/js/main.js"></script>
 </body>
-<script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-<script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-<script src="../assets/js/pages/dashboard.js"></script>
-
-<script src="../assets/js/main.js"></script>
 
 </html>
