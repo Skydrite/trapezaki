@@ -1,3 +1,21 @@
+//On click j on document ready na ginunte
+
+// On click active -> change text to active
+//                   -> remove class btn-success or btn-danger or btn-secondary
+//                   -> add class btn-success
+//                   -> if disabled, enable button
+
+// On click disabled -> change text to disabled
+//                   -> remove class btn-success or btn-danger or btn-secondary
+//                   -> add class btn-danger
+//                   -> if disabled, enable button
+
+// On pending        -> change text to pending
+//                   -> remove class btn-success or btn-danger or btn-secondary
+//                   -> add class btn-secondary
+//                   -> disable button
+
+
 $(document).ready(function(){ 
 
     //Check if its a pending customer and disable the button
@@ -26,20 +44,6 @@ $(document).ready(function(){
  });
 
 
-
-//On click j on document ready na ginunte
-
-// On click active -> change text to active
-//                   -> remove class btn-success or btn-danger or btn-secondary
-//                   -> add class btn-success
-//                   -> if disabled, enable button
-
-// On click disabled -> change text to disabled
-//                   -> remove class btn-success or btn-danger or btn-secondary
-//                   -> add class btn-danger
-//                   -> if disabled, enable button
-
-// On pending        -> change text to pending
-//                   -> remove class btn-success or btn-danger or btn-secondary
-//                   -> add class btn-secondary
-//                   -> disable button
+$('#btnFloorPlan').click(function(){
+    window.location.replace('user1-change_floor.html');
+});

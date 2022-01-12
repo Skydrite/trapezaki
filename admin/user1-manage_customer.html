@@ -293,7 +293,7 @@
                         <h4 class="card-title">Floor Plan</h4>
                     </div>
                     <div class="card-body">
-                        <Button class="btn btn-primary me-1 mb-1">Open Floor Plan Editor</Button>
+                        <Button id="btnFloorPlan" class="btn btn-primary me-1 mb-1">Open Floor Plan Editor</Button>
                     </div>
                 </div>
 
@@ -303,15 +303,35 @@
                         <h4 class="card-title">Location</h4>
                     </div>
                     <div class="card-body">
-                        <iframe src="https://maps.google.com/maps?q=CUT%20cyprus&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <input type="text" id="location" class="form-control round" value="99818181">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <div id="us2" style="width: 500px; height: 400px;"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <button type="submit" class="btn btn-success me-1 mb-1">Save changes</button>
-                </footer>
+                    <div class="form-group col-md-2 d-flex">
+                        <label for="lat" hidden>Latitude</label>
+                        <input type="text" id="lat" style="width: 200px" hidden />
+                        <label for="lng" hidden>Longitude</label>
+                        <input type="text" id="lng" style="width: 200px" hidden/>
+                    </div>
+                    <!--To javascript maps-script prepei na allaksei-->
+                    <!-- Na elegxei to City tu XE2 j na allassei ta coordinates analoga-->
+                    <!--TODO: na rotisume ton kathigiti an en ok na afikume extsi xoris to license tis google-->
+                    <!--https://embed.plnkr.co/mfiPLrChUShIMLvpqjHI/ -->
+                </div>
             </div>
+
+            <button type="submit" class="btn btn-success me-1 mb-1">Save changes</button>
+            </footer>
         </div>
+    </div>
 
 </body>
 
@@ -323,3 +343,10 @@
 <script src="../assets/vendors/choices.js/choices.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/status-cust.js"></script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+<script type="text/javascript"
+    src="https://rawgit.com/Logicify/jquery-locationpicker-plugin/master/dist/locationpicker.jquery.js"></script>
+<script src="../assets/js/maps-script.js"></script>
