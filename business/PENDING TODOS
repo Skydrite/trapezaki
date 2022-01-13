@@ -2,7 +2,9 @@
 - to dashboard fkallei parapano noima nan 2o
 -popup issue submitted sto report_problem j issue not submitted
 -delete a reservation sto manage reservations na aniei checkboxes dipla p kathe row gia na epilekseis for delete
--na eshi search gia reservations me date,name,username, irte or not sto manage reservations
+-na eshi search gia reservations me date,name,username, irte or not sto manage reservations see table-datatable
 
 - reservation has come tick?
 - click to see details na en popup ta details j na eshi p kato edit j tick oti irte
+
+- sta sign in an patisun login xoris na ta simplirosun ulla na eshi toast "Oops! Something is missing" pu to extra-component-toastify

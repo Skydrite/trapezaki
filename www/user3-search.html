@@ -60,282 +60,241 @@
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
-        <div id="main" class='layout-navbar'>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
 
-            <div id="main-content">
+                        <div class="page-title">
+                            <div class="row">
+                                <div class="col-md-16 mb-1">
 
-                <div class="page-heading">
-                    <div class="page-title">
-                        <div class="row">
-
-                            <div class="page-title">
-                                <div class="row">
-                                    <div class="col-md-16 mb-1">
-
-                                    </div>
-                                    <div class="col-12 col-md-6 order-md-2 order-first">
-                                        <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                                            <ol class="breadcrumb">
-                                                </li>
-                                            </ol>
-                                        </nav>
-                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 order-md-2 order-first">
+                                    <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                        <ol class="breadcrumb">
+                                            </li>
+                                        </ol>
+                                    </nav>
                                 </div>
                             </div>
-                            <section class="section">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="col-12 col-md-6 order-md-1 order-last">
-                                            <h3>Search </h3>
-                                        </div>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1"><i
-                                                    class="bi bi-search"></i></span>
-                                            <input type="text" class="form-control"
-                                                placeholder="Find restaurants, bar, cafe..."
-                                                aria-label="Find restaurants, bar, cafe..."
-                                                aria-describedby="button-addon2">
+                        </div>
+                        <section class="section">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="col-12 col-md-6 order-md-1 order-last">
+                                        <h3>Search </h3>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="bi bi-search"></i></span>
+                                        <input type="text" class="form-control"
+                                            placeholder="Find restaurants, bar, cafe..."
+                                            aria-describedby="button-addon2">
 
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="row">
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <div class="row">
 
-                                                    <div class="col-md-4 mb-2">
-                                                        <h6>Date</h6>
-                                                        <input type="date" class="form-control" value="2017-06-01">
-                                                    </div>
+                                                <div class="col-md-4 row-col-4">
+                                                    <h6>Date</h6>
+                                                    <input type="date" id="mydate" class="form-control" value="2017-06-01">
+                                                </div>
 
-                                                    <div class="col-md-4 mb-2">
-                                                        <h6>Number of pepople </h6>
-                                                        <fieldset class="form-group">
-                                                            <select class="form-select" id="basicSelect">
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>3</option>
-                                                                <option>4</option>
-                                                                <option>5</option>
-                                                                <option>6</option>
-                                                                <option>7</option>
-                                                                <option>8</option>
-                                                                <option>9</option>
-                                                                <option>10</option>
-                                                            </select>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="col-md-4 mb-2">
-                                                        <h6>Category </h6>
-                                                        <fieldset class="form-group">
-                                                            <select class="form-select" id="basicSelect">
-                                                                <option>Food </option>
-                                                                <option> Drink </option>
-                                                                <option> Coffee </option>
-                                                            </select>
-                                                        </fieldset>
-                                                    </div>
+                                                <div class="col-md-4 mb-2">
+                                                    <h6>Number of people </h6>
+                                                    <fieldset class="form-group">
+                                                        <select class="form-select" id="basicSelect">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-4 mb-2">
+                                                    <h6>Category </h6>
+                                                    <fieldset class="form-group">
+                                                        <select class="form-select" id="basicSelect">
+                                                            <option>Food </option>
+                                                            <option> Drink </option>
+                                                            <option> Coffee </option>
+                                                        </select>
+                                                    </fieldset>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                            </section>
-                        </div>
-                        <div class="row">
-
-                            <h3>Results</h3>
-                            <p class="text-subtitle text-muted">You searched for "bar" </p>
-                        </div>
-
-                        <div class="card">
-
-                            <div class="card-header ">
-                                <h4 class="card-title">Bordello Bar </h4>
-
-                            </div>
-                            <div class="animal_last_1 justify-content-end">
-                                <img src="../img/72.jpg" width="180" height="200" />
-                                <i class="fa fa-map-marker" style="font-size:24px;color:red">
-                                    <string style="font-size:18px;color:black">3km from Limassol</string>
-
-                                    <section class="section">
-
-                                        <div class="row">
-                                            <i class="fa fa-wifi" style="font-size:24px;color:cyan">
-                                                <string style="font-size:18px;color:black">Free wi-fi</string>
-                                            </i>
-
-                                            <i class="fas fa-smoking" style="font-size:25px;color:black">
-                                                <string style="font-size:18px;color:black">Has smoking area</string>
-                                            </i>
-
-                                            <div class="col-sm-12 d-flex justify-content-end">
-                                                <br>
-                                                <button type="submit" class="btn btn-primary me-1 mb-1">Book
-                                                    now</button>
-                                            </div>
-
-                                        </div>
-
-                                    </section>
-                                </i>
-                                <div class="col-10">
-                                    <div class="card-body">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <String style="color:black">Reviews 785 </String>
-                                    </div>
-
                                 </div>
 
+                        </section>
+                    </div>
+                    <div class="row">
 
+                        <h3>Results</h3>
+                        <p class="text-subtitle text-muted">You searched for "bar" </p>
+                    </div>
 
-
-                            </div>
-                            <section class="section">
-                        </div>
-
-                        <div class="card">
-
-                            <div class="card-header ">
-                                <h4 class="card-title">Guest </h4>
-
-                            </div>
-                            <div class="animal_last_1 justify-content-end">
-                                <img src="img/72.jpg" width="180" height="200" />
-                                <i class="fa fa-map-marker" style="font-size:24px;color:red">
-                                    <string style="font-size:18px;color:black">3km from Limassol</string>
-
-                                    <section class="section">
-
-                                        <div class="row">
-                                            <i class="fa fa-wifi" style="font-size:24px;color:cyan">
-                                                <string style="font-size:18px;color:black">Free wi-fi</string>
-                                            </i>
-
-                                            <i class="fas fa-smoking" style="font-size:25px;color:black">
-                                                <string style="font-size:18px;color:black">Has smoking area</string>
-                                            </i>
-
-                                            <div class="col-sm-12 d-flex justify-content-end">
-
-
-
-
-                                                <br>
-                                                <button type="submit" class="btn btn-primary me-1 mb-1">Book
-                                                    now</button>
-                                            </div>
-
-
-
-                                        </div>
-
-                                    </section>
-                                </i>
-                                <div class="col-10">
-                                    <div class="card-body">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <String style="color:black">Review 785 </String>
+                    <div class="card">
+                        <div class="row-cols-1">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xl me-4">
+                                        <img src="../assets/images/faces/3.jpg">
                                     </div>
-
-                                </div>
-
-
-
-
-                            </div>
-                            <section class="section">
-                        </div>
-
-                        <div class="card">
-
-                            <div class="card-header ">
-                                <h4 class="card-title">Library bar </h4>
-
-                            </div>
-                            <div class="animal_last_1 justify-content-end">
-                                <img src="img/72.jpg" width="180" height="200" />
-                                <i class="fa fa-map-marker" style="font-size:24px;color:red">
-                                    <string style="font-size:18px;color:black">3km from Limassol</string>
-
-                                    <section class="section">
-
-                                        <div class="row">
-                                            <i class="fa fa-wifi" style="font-size:24px;color:cyan">
-                                                <string style="font-size:18px;color:black">Free wi-fi</string>
-                                            </i>
-
-                                            <i class="fas fa-smoking" style="font-size:25px;color:black">
-                                                <string style="font-size:18px;color:black">Has smoking area</string>
-                                            </i>
-
-                                            <div class="col-sm-12 d-flex justify-content-end">
-
-
-
-
-                                                <br>
-                                                <button type="submit" class="btn btn-primary me-1 mb-1">Book
-                                                    now</button>
-                                            </div>
-
-
-
-                                        </div>
-
-                                    </section>
-                                </i>
-                                <div class="col-10">
-                                    <div class="card-body">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <String style="color:black">Reviews 866 </String>
+                                    <h4 class="card-title text-nowrap">Bordello Bar </h4>
+                                    <div class="container" style="text-align: end;">
+                                        <div class="text-danger">5 chairs left</div>
                                     </div>
-
                                 </div>
-
-
-
-
                             </div>
-                            <section class="section">
+                            <div class="flex card-body te">
+                                <p class="text-muted">
+                                    This is a description where you put a description inside the card that is the
+                                    actual description of the business that offers the data that the company
+                                    provided for description when they signed up so that will be displayed here and
+                                    lets see if it is truncated if its too long
+                                </p>
+                                <p class="font-bold">Coffee, Food, Drinks</p>
+                            </div>
                         </div>
-
-                        <footer>
-                            <div class="footer clearfix mb-0 text-muted">
-
+                    </div>
+                    <div class="card">
+                        <div class="row-cols-1">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xl me-4">
+                                        <img src="../assets/images/faces/3.jpg">
+                                    </div>
+                                    <h4 class="card-title text-nowrap">Bordello Bar </h4>
+                                    <div class="container" style="text-align: end;">
+                                        <div class="text-danger">5 chairs left</div>
+                                    </div>
+                                </div>
                             </div>
-                        </footer>
+                            <div class="flex card-body te">
+                                <p class="text-muted">
+                                    This is a description where you put a description inside the card that is the
+                                    actual description of the business that offers the data that the company
+                                    provided for description when they signed up so that will be displayed here and
+                                    lets see if it is truncated if its too long
+                                </p>
+                                <p class="font-bold">Coffee, Food, Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row-cols-1">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xl me-4">
+                                        <img src="../assets/images/faces/3.jpg">
+                                    </div>
+                                    <h4 class="card-title text-nowrap">Bordello Bar </h4>
+                                    <div class="container" style="text-align: end;">
+                                        <div class="text-danger">5 chairs left</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex card-body te">
+                                <p class="text-muted">
+                                    This is a description where you put a description inside the card that is the
+                                    actual description of the business that offers the data that the company
+                                    provided for description when they signed up so that will be displayed here and
+                                    lets see if it is truncated if its too long
+                                </p>
+                                <p class="font-bold">Coffee, Food, Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row-cols-1">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xl me-4">
+                                        <img src="../assets/images/faces/3.jpg">
+                                    </div>
+                                    <h4 class="card-title text-nowrap">Bordello Bar </h4>
+                                    <div class="container" style="text-align: end;">
+                                        <div class="text-danger">5 chairs left</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex card-body te">
+                                <p class="text-muted">
+                                    This is a description where you put a description inside the card that is the
+                                    actual description of the business that offers the data that the company
+                                    provided for description when they signed up so that will be displayed here and
+                                    lets see if it is truncated if its too long
+                                </p>
+                                <p class="font-bold">Coffee, Food, Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row-cols-1">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xl me-4">
+                                        <img src="../assets/images/faces/3.jpg">
+                                    </div>
+                                    <h4 class="card-title text-nowrap">Bordello Bar </h4>
+                                    <div class="container" style="text-align: end;">
+                                        <div class="text-danger">5 chairs left</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex card-body te">
+                                <p class="text-muted">
+                                    This is a description where you put a description inside the card that is the
+                                    actual description of the business that offers the data that the company
+                                    provided for description when they signed up so that will be displayed here and
+                                    lets see if it is truncated if its too long
+                                </p>
+                                <p class="font-bold">Coffee, Food, Drinks</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <section class="section">
+        </div>
 
 
-            <!-- Gia to cigarette icon, gia ta bold grammata klp -->
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-                integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-                crossorigin="anonymous">
+        <footer>
+            <div class="footer clearfix mb-0 text-muted">
+
+            </div>
+        </footer>
+    </div>
+    </div>
 
 
 
-            <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-            <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
-            <script src="../assets/js/main.js"></script>
 
-            <script src="../assets/vendors/rater-js/rater-js.js"></script>
-            <script src="../assets/js/extensions/rater-js.js"></script>
-            <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </body>
 
 </html>
+
+
+<script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/vendors/rater-js/rater-js.js"></script>
+<script src="../assets/js/extensions/rater-js.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/date-no-prev.js"></script>
