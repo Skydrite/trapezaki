@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User3 resv</title>
+    <title>Trapezaki - My Reservations</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -72,11 +72,7 @@
 
             <div class="page-heading">
                 <h3>My Reservations</h3>
-
-
             </div>
-
-
 
             <div class="card">
                 <div class="card-content">
@@ -84,10 +80,11 @@
                         <div class="row">
                             <div class="col-md-5 mb-2">
                                 <div class="input-group mb-2">
-                                    <label class="input-group-text" for="inputGroupSelect01">Date</label>
-                                    <input type="date" class="form-control" style="min-width: 66px;" id="inputGroupSelect01">
+                                    <label class="input-group-text" for="mydate">Date</label>
+                                    <input type="date" id="mydate" class="form-control" style="min-width: 66px;">
                                 </div>
                             </div>
+
                             <!-- Hoverable rows start -->
                             <section class="section">
                                 <div class="row" id="table-hover-row">
@@ -177,7 +174,7 @@
                             <div class="col-sm-12 d-flex justify-content-start">
 
                                 <form action="user2-addres.html">
-                                    <input type="button" value="Delete Reservation" />
+                                    <input type="button" class="btn btn-primary" value="Cancel Reservation" />
                                 </form>
 
                             </div>
@@ -192,16 +189,15 @@
             </footer>
         </div>
     </div>
-    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="../assets/js/pages/dashboard.js"></script>
-
-    <script src="../assets/vendors/rater-js/rater-js.js"></script>
-    <script src="../assets/js/extensions/rater-js.js"></script>
-
-    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
+
+<script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendors/rater-js/rater-js.js"></script>
+<script src="../assets/js/extensions/rater-js.js"></script>
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/date-no-prev.js"></script>
+<script src="../assets/js/main.js"></script>
