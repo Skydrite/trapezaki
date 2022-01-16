@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
     <link rel="stylesheet" href="../assets/vendors/iconly/bold.css">
+
+        <!-- Datatable Css Include -->
+        <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
 
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -75,12 +77,44 @@
             </div>
 
             <div class="page-content">
+
+                <div class="col-md-6 mb-1">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        <input type="text" id="SearchIssue" class="form-control" placeholder="Find Issue"
+                            aria-label="Find Issue" aria-describedby="button-addon2">
+                    </div>
+
+                    <div class='form-check'>
+                        <div class="container">
+                            <div class="row col-1">
+                                <div class="col-sm checkbox">
+                                    <input type="checkbox" id="checkSolved" class='form-check-input' unchecked>
+                                    <label for="checkSolved">Solved</label>
+                                </div>
+
+                                <div class="col-sm checkbox">
+                                    <input type="checkbox" id="checkCant" class='form-check-input' unchecked>
+                                    <label class="text-nowrap" for="checkCant">Can't be solved</label>
+                                </div>
+
+                                <div class="col-sm checkbox">
+                                    <input type="checkbox" id="checkNot" class='form-check-input' unchecked>
+                                    <label class="text-nowrap" for="checkNot">Not Flagged</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
                 <section class="row">
                     <div class="col-12 col-lg-9">
                         <div class="row">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover table-lg">
+                                    <table id="issueTable" class="table table-hover table-lg">
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
@@ -89,16 +123,16 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="col-8" id="issue">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar avatar-md">
-                                                            <img src="../assets/images/faces/5.jpg">
+                                                <td class="col-8 issueName" >
+                                                        <!-- The popup opens with issues.js when id=issue is cicked-->
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="avatar avatar-md">
+                                                                <img src="../assets/images/faces/5.jpg">
+                                                            </div>
+                                                            <p class="font-bold ms-3 mb-0">Si Cantik</p>
                                                         </div>
-                                                        <p class="font-bold ms-3 mb-0">Si Cantik</p>
-                                                    </div>
-                                                    </a>
                                                 </td>
-                                                <td>
+                                                <td class="col-8 issueName">
                                                     <p class=" mb-0">07/12/2020</p>
                                                 </td>
                                                 <td class="d-flex flex-nowrap">
@@ -110,16 +144,15 @@
                                             </tr>
 
                                             <tr>
-                                                <td class="col-8" id="issue">
+                                                <td class="col-8 issueName">
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar avatar-md">
                                                             <img src="../assets/images/faces/2.jpg">
                                                         </div>
                                                         <p class="font-bold ms-3 mb-0">Si ioakim</p>
                                                     </div>
-                                                    </a>
                                                 </td>
-                                                <td>
+                                                <td class="col-8 issueName">
                                                     <p class="mb-0">10/05/2021</p>
                                                 </td>
                                                 <td class="d-flex flex-nowrap">
@@ -127,6 +160,26 @@
                                                         solved</a>
                                                     <a href="#"
                                                         class="btn btn-outline-success text-nowrap active">Solved</a>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td class="col-8 issueName">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-md">
+                                                            <img src="../assets/images/faces/2.jpg">
+                                                        </div>
+                                                        <p class="font-bold ms-3 mb-0">Si IoRa</p>
+                                                    </div>
+                                                </td>
+                                                <td class="col-8 issueName">
+                                                    <p class="mb-0">10/05/2021</p>
+                                                </td>
+                                                <td class="d-flex flex-nowrap">
+                                                    <a href="#" class="btn btn-outline-danger text-nowrap">Can't be
+                                                        solved</a>
+                                                    <a href="#" class="btn btn-outline-success text-nowrap">Solved</a>
                                                 </td>
 
                                             </tr>
@@ -183,14 +236,15 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <br>
+                                        <br>
                                         <div class="card">
-                                            <h4 class="card-title" for="issueTextArea">Details</h4>
+                                            <h4 class="card-title" for="issueTextArea">Description</h4>
                                             <label class="form-control" id="issueTextArea">The issue will be
                                                 written here and might be a long one but it doenst matter
                                                 because the lines can wrap and the modal can scroll down as much
                                                 as you want so that you can see the details written by the
-                                                business that have to do with the issue.</label>
+                                                business.</label>
                                         </div>
                                     </div>
                                 </div>
@@ -230,6 +284,9 @@
 </body>
 
 </html>
+
+<!-- Datatable Js Include -->
+<script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
 
 <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
