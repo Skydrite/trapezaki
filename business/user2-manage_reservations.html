@@ -102,64 +102,46 @@
                                                     <table class="table table-hover mb-0">
                                                         <thead>
                                                             <tr>
-                                                                <th>ResNum</th>
+                                                                <!-- <th>ResNum</th> -->
                                                                 <th>Time</th>
                                                                 <th>Name</th>
-                                                                <th>People</th>
-                                                                <th>Details</th>
-                                                                <th>Area</th>
-                                                                <th>Table</th>
+                                                                <th>Attendance</th>
+                                                                <th>Table/Area</th>
+                                                                <!-- Analogws me ti ena epileksei na tu fkallei to analogo text -->
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="text-bold-500">100</td>
+                                                            <tr class="resvPopup table-info">
+                                                                <!-- Reservation number should be included but hidden gia na liturgisi me to modal -->
+                                                                <td id="resNum" hidden>24</td>
                                                                 <td>18:00</td>
-                                                                <td class="text-bold-500">Nicholas</td>
-                                                                <td>6</td>
-                                                                <td>Coffee</td>
-                                                                <td>51</i></a></td>
+                                                                <td class="text-bold-500">Santiago Alonso</td>
+                                                                <td>1/3</td>
                                                                 <td>5</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Morgan Vanblum</td>
-                                                                <td>$13/hr</td>
-                                                                <td class="text-bold-500">Graphic concepts</td>
-                                                                <td>Remote</td>
-                                                                <td>Shangai,China</td>
-                                                                <td><a href="#"><i
-                                                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                                            data-feather="mail"></i></a></td>
+                                                            <tr class="resvPopup">
+                                                                <td>08:00</td>
+                                                                <td class="text-bold-500">O Jiris M</td>
+                                                                <td>9/11</td>
+                                                                <td>5</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Tiffani Blogz</td>
-                                                                <td>$15/hr</td>
-                                                                <td class="text-bold-500">Animation</td>
-                                                                <td>Remote</td>
-                                                                <td>Austin,Texas</td>
-                                                                <td><a href="#"><i
-                                                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                                            data-feather="mail"></i></a></td>
+                                                            <tr class="resvPopup">
+                                                                <td>15:30</td>
+                                                                <td class="text-bold-500">Kostis Palamas</td>
+                                                                <td>0/5</td>
+                                                                <td>5</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Ashley Boul</td>
-                                                                <td>$15/hr</td>
-                                                                <td class="text-bold-500">Animation</td>
-                                                                <td>Remote</td>
-                                                                <td>Austin,Texas</td>
-                                                                <td><a href="#"><i
-                                                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                                            data-feather="mail"></i></a></td>
+                                                            <tr class="resvPopup table-danger">
+                                                                <td>16:50</td>
+                                                                <td class="text-bold-500">Nicholas Nichola</td>
+                                                                <td>0/4</td>
+                                                                <td>5</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Mikkey Mice</td>
-                                                                <td>$15/hr</td>
-                                                                <td class="text-bold-500">Animation</td>
-                                                                <td>Remote</td>
-                                                                <td>Austin,Texas</td>
-                                                                <td><a href="#"><i
-                                                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                                            data-feather="mail"></i></a></td>
+                                                            <tr class="resvPopup table-success">
+                                                                <td>22:00</td>
+                                                                <td class="text-bold-500">Andreas Efstathiou</td>
+                                                                <td>5/5</td>
+                                                                <td>5</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -173,10 +155,110 @@
                             <div class="col-sm-12 d-flex justify-content-start form-group">
                                 <form>
                                     <input type="submit" class="btn btn-primary" value="Add Reservation" />
-                                    <input type="submit" class="btn btn-primary" value="Edit Reservation" />
-                                    <input type="button" class="btn btn-primary" value="Delete Reservation" />
                                 </form>
                             </div>
+
+
+
+                            <!-- Modal starts here-->
+                            <div class="modal fade" id="issueModal" tabindex="-1" role="dialog"
+                                aria-labelledby="issueModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
+                                    role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="issueModalCenterTitle">Reservation Details
+                                            </h5>
+                                            <button type="button" class="close" data-bs-dismiss="modal"
+                                                aria-label="Close">
+                                                <i data-feather="x">x</i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- body here-->
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="flex-nowrap input-group col-md-5 mb-4">
+                                                            <label class="input-group-text"
+                                                                for="issueBusiness">Reservation Number</label>
+                                                            <label type="text" class="form-control"
+                                                                id="issueBusiness">35234</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-10">
+                                                        <div class="flex-nowrap input-group col-md-5 mb-4">
+                                                            <label class="input-group-text"
+                                                                for="issueBusiness">Name</label>
+                                                            <label type="text" class="form-control"
+                                                                id="issueBusiness">Efstathios Andreou</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-5">
+                                                        <div class="d-flex input-group col-md-3 mb-3">
+                                                            <label class="input-group-text" for="issueType">Table/Area</label>
+                                                            <label type="text" class="form-control"
+                                                                id="issueType">4</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-7 mb-1">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text">Attendance</span>
+                                                            <input type="number" class="form-control"value="0">
+                                                            <span class="input-group-text">/4</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12">
+                                                        <div class="col-md-4 mb-4">
+                                                            <div class="input-group mb-4">
+                                                                <label class="input-group-text"
+                                                                    for="issueImportance">Time</label>
+                                                                <label type="text" class="form-control"
+                                                                    id="issueImportance">18:00</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <br>
+                                                    <br>
+                                                    <div class="card">
+                                                        <h7 class="" for="issueTextArea">Description</h7>
+                                                        <label class="form-control" id="issueTextArea">The description will be
+                                                            written here and might be a long one but it doenst matter
+                                                            because the lines can wrap and the modal can scroll down as
+                                                            much
+                                                            as you want so that you can see the details written by the
+                                                            customer.</label>
+                                                    </div>
+
+                                                    <div class="col-sm-12 d-flex form-group">
+                                                        <form class="col">
+                                                            <input type="button" id="modResv" class="btn btn-light-secondary" value="Modify Reservation" />
+                                                            <input type="button" class="btn btn-light-secondary" value="Cancel Reservation" />
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light-secondary"
+                                                data-bs-dismiss="modal">
+                                                <i class="bx bx-x d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">Close</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Ends Here-->
+
+
+
                         </div>
                     </div>
                 </div>
@@ -199,3 +281,4 @@
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
 <script src="../assets/js/date-no-prev.js"></script>
+<script src="../assets/js/reservations.js"></script>
