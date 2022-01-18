@@ -11,4 +11,5 @@ $(function(){
     
     var maxDate = year + '-' + month + '-' + day;
     $('#mydate').attr('min', maxDate);
+    $('#mydate').val(maxDate);
 });
