@@ -56,7 +56,7 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item ">
+                        <li class="sidebar-item " hidden>
                             <a href="user2-dashboard.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
@@ -181,7 +181,7 @@
                                                     <div class="col-sm-10">
                                                         <div class="flex-nowrap input-group col-md-5 mb-4">
                                                             <label class="input-group-text"
-                                                                for="issueBusiness">Reservation Number</label>
+                                                                for="issueBusiness">Reservation No.</label>
                                                             <label type="text" class="form-control"
                                                                 id="issueBusiness">35234</label>
                                                         </div>
@@ -207,7 +207,7 @@
                                                     <div class="col-lg-7 mb-1">
                                                         <div class="input-group mb-3">
                                                             <span class="input-group-text">Attendance</span>
-                                                            <input type="number" class="form-control"value="0">
+                                                            <input type="number" min="0" class="form-control" value="0">
                                                             <span class="input-group-text">/4</span>
                                                         </div>
                                                     </div>
@@ -237,8 +237,8 @@
 
                                                     <div class="col-sm-12 d-flex form-group">
                                                         <form class="col">
-                                                            <input type="button" id="modResv" class="btn btn-light-secondary" value="Modify Reservation" />
-                                                            <input type="button" class="btn btn-light-secondary" value="Cancel Reservation" />
+                                                            <input type="button" id="modResv" class="btn btn-light-secondary" value="Modify" />
+                                                            <input type="button" class="btn btn-light-secondary" value="Cancel" />
                                                         </form>
                                                     </div>
 
@@ -248,8 +248,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-light-secondary"
                                                 data-bs-dismiss="modal">
-                                                <i class="bx bx-x d-block d-sm-none"></i>
-                                                <span class="d-none d-sm-block">Close</span>
+                                                <span class="d-block d-sm-block">Close</span>
                                             </button>
                                         </div>
                                     </div>
