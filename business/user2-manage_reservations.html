@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
     <link rel="stylesheet" href="../assets/vendors/iconly/bold.css">
+
+    <!-- Datatable Css Include -->
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
 
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -105,7 +107,7 @@
                                                                 <!-- <th>ResNum</th> -->
                                                                 <th>Time</th>
                                                                 <th>Name</th>
-                                                                <th>Attendance</th>
+                                                                <th>People</th>
                                                                 <th>Table/Area</th>
                                                                 <!-- Analogws me ti ena epileksei na tu fkallei to analogo text -->
                                                             </tr>
@@ -164,7 +166,7 @@
                             <!-- Hoverable rows end -->
                             <div class="col-sm-12 d-flex justify-content-start form-group">
                                 <form>
-                                    <input type="submit" class="btn btn-primary" value="Add Reservation" />
+                                    <input type="button" id="newRes" class="btn btn-primary" value="Add Reservation" />
                                 </form>
                             </div>
 
@@ -217,7 +219,7 @@
 
                                                     <div class="col-lg-7 mb-1">
                                                         <div class="input-group mb-3">
-                                                            <span class="input-group-text">Attendance</span>
+                                                            <span class="input-group-text">People</span>
                                                             <input type="number" id="attendance" min="0" max="4" class="form-control"
                                                                 value="0">
                                                             <span class="input-group-text">/4</span>
@@ -289,10 +291,14 @@
 
 </html>
 
+<!-- Datatable Js Include -->
+<script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
 
 <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="../assets/js/manage-resv-datatable.js"></script>
 <script src="../assets/js/date-no-prev.js"></script>
 <script src="../assets/js/reservations.js"></script>
