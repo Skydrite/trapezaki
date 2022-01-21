@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" href="../assets/vendors/iconly/bold.css">
 
+    <!-- Rater Stylesheet-->
+    <link rel="stylesheet" href="../assets/vendors/rater-js/style.css">
+
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -78,12 +81,6 @@
                 <div class="card-content">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-5 mb-2">
-                                <div class="input-group mb-2">
-                                    <label class="input-group-text" for="mydate">Date</label>
-                                    <input type="date" id="mydate" class="form-control" style="min-width: 66px;">
-                                </div>
-                            </div>
 
                             <!-- Hoverable rows start -->
                             <section class="section">
@@ -91,98 +88,201 @@
                                     <div class="col-12">
                                         <div class="card">
                                             <div class="card-content">
-                                                <div class="card-body">
-                                                </div>
-                                                <!-- table hover -->
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Place</th>
-                                                                <th>Time</th>
-                                                                <th>Name</th>
-                                                                <th>People</th>
-                                                                <th>Details</th>
-                                                                <th>Area</th>
-                                                                <th>Table</th>
-                                                                <th>Review </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="text-bold-500">100</td>
-                                                                <td>18:00</td>
-                                                                <td class="text-bold-500">Nicholas</td>
-                                                                <td>6</td>
-                                                                <td>Coffee</td>
-                                                                <td>51</i></a></td>
-                                                                <td>5</td>
-                                                                <td>&#10003;</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Morgan Vanblum</td>
-                                                                <td>$13/hr</td>
-                                                                <td class="text-bold-500">Graphic concepts</td>
-                                                                <td>Remote</td>
-                                                                <td>Shangai,China</td>
-                                                                <td>51</i></a></td>
-                                                                <td>5</td>
-                                                                <td>Upcoming</td>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Tiffani Blogz</td>
-                                                                <td>$15/hr</td>
-                                                                <td class="text-bold-500">Animation</td>
-                                                                <td>Remote</td>
-                                                                <td>Austin,Texas</td>
-                                                                <td>51</i></a></td>
-                                                                <td>5</td>
-                                                                <td>
-                                                                    <div class="card-body">
-                                                                        <div id="basic"></div>
+                                                <section class="section">
+
+                                                    <div class="row">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                                    <li class="nav-item" role="presentation">
+                                                                        <a class="nav-link active" id="home-tab"
+                                                                            data-bs-toggle="tab" href="#home" role="tab"
+                                                                            aria-controls="home"
+                                                                            aria-selected="false">Upcoming</a>
+                                                                    </li>
+                                                                    <li class="nav-item" role="presentation">
+                                                                        <a class="nav-link" id="profile-tab"
+                                                                            data-bs-toggle="tab" href="#profile"
+                                                                            role="tab" aria-controls="profile"
+                                                                            aria-selected="false">Completed <span
+                                                                                class="badge bg-info">3</span></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="tab-content" id="myTabContent">
+                                                                    <div class="tab-pane fade show active" id="home"
+                                                                        role="tabpanel" aria-labelledby="home-tab">
+
+                                                                        <!-- table hover -->
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-hover mb-0">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Place</th>
+                                                                                        <th>Time</th>
+                                                                                        <th>People</th>
+                                                                                        <th>Date</th>
+                                                                                        <!-- Analogws me ti ena epileksei na tu fkallei to analogo text -->
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Bordello</td>
+                                                                                        <!-- Reservation number should be included but hidden gia na liturgisi me to modal -->
+                                                                                        <td class="time">18:00</td>
+                                                                                        <td><span
+                                                                                                class="people">3</span>
+                                                                                        </td>
+                                                                                        <td>5/10/2022</td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Gwnia</td>
+                                                                                        <td class="time">20:00</td>
+                                                                                        <td> <span
+                                                                                                class="people">10</span>
+                                                                                        </td>
+                                                                                        <td>13/3/2022</td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Sherlock's Home</td>
+                                                                                        <td class="time">18:14</td>
+                                                                                        <td> <span
+                                                                                                class="people">5</span>
+                                                                                        </td>
+                                                                                        <td>25/3/2022</td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Pralina</td>
+                                                                                        <td class="time">16:00</td>
+                                                                                        <td> <span
+                                                                                                class="people">4</span>
+                                                                                        </td>
+                                                                                        <td>3/1/2022</td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Theoria kai Praxi</td>
+                                                                                        <td class="time">22:00</td>
+                                                                                        <td> <span
+                                                                                                class="people">5</span>
+                                                                                        </td>
+                                                                                        <td>19/1/2022</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Ashley Boul</td>
-                                                                <td>$15/hr</td>
-                                                                <td class="text-bold-500">Animation</td>
-                                                                <td>Remote</td>
-                                                                <td>Austin,Texas</td>
-                                                                <td></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="text-bold-500">Mikkey Mice</td>
-                                                                <td>$15/hr</td>
-                                                                <td class="text-bold-500">Animation</td>
-                                                                <td>Remote</td>
-                                                                <td>Austin,Texas</td>
-                                                                <td><a href="#"><i
-                                                                            class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                                            data-feather="mail"></i></a></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                                                    <div class="tab-pane fade" id="profile"
+                                                                        role="tabpanel" aria-labelledby="profile-tab">
+
+                                                                        <!-- table hover -->
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-hover mb-0">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Place</th>
+                                                                                        <th>Date</th>
+                                                                                        <th>Rating</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Bordello</td>
+                                                                                        <td>5/10/2022</td>
+                                                                                        <td>
+                                                                                            <div
+                                                                                                class="col-md-4 col-12">
+                                                                                                <button
+                                                                                                    class="btn btn-outline-info btn-sm btn-block rate">Rate
+                                                                                                    Now!</button>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Gwnia</td>
+                                                                                        <td>13/3/2022</td>
+                                                                                        <td>
+                                                                                            <div
+                                                                                                class="col-md-4 col-12">
+                                                                                                <button
+                                                                                                    class="btn btn-outline-info btn-sm btn-block rate">Rate
+                                                                                                    Now!</button>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Sherlock's Home</td>
+                                                                                        <td>25/3/2022</td>
+                                                                                        <td>Rating added</td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Pralina</td>
+                                                                                        <td>3/1/2022</td>
+                                                                                        <td>Rating added</td>
+                                                                                    </tr>
+                                                                                    <tr class="resvPopup">
+                                                                                        <td>Theoria kai Praxi</td>
+                                                                                        <td>19/1/2022</td>
+                                                                                        <td>
+                                                                                            <div
+                                                                                                class="col-md-4 col-12">
+                                                                                                <button
+                                                                                                    class="btn btn-outline-info btn-sm btn-block rate">Rate
+                                                                                                    Now!</button>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </section>
                             <!-- Hoverable rows end -->
-                            <div class="col-sm-12 d-flex justify-content-start">
 
-                                <form action="user2-addres.html">
-                                    <input type="button" class="btn btn-primary" value="Cancel Reservation" />
-                                </form>
 
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!--small size modal -->
+            <div class="modal fade text-left" id="small" tabindex="-1" role="dialog" aria-labelledby="myModalLabel19"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel19">Rate your experience</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">x
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-center">
+                                <div id="rating"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary btn-sm" data-bs-dismiss="modal">
+                                <span class="d-sm-block">Close</span>
+                            </button>
+                            <button type="button" id="rateConfirm" class="btn btn-primary ml-1 btn-sm" data-bs-dismiss="modal">
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- small size modal end-->
 
             <footer>
 
@@ -196,8 +296,14 @@
 
 <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendors/rater-js/rater-js.js"></script>
-<script src="../assets/js/extensions/rater-js.js"></script>
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
 <script src="../assets/js/date-no-prev.js"></script>
+
+
+<script src="../assets/js/my-resv.js"></script>
+
+<!-- Rater Plugin -->
+<script src="../assets/vendors/rater-js/rater-js.js"></script>
+<script src="../assets/js/extensions/rater-js.js"></script>
+
 <script src="../assets/js/main.js"></script>

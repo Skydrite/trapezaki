@@ -1,38 +1,23 @@
-window.raterJs({
-    element: document.querySelector("#basic"), 
-    starSize: 32,
+var rater = window.raterJs({
+    element: document.querySelector("#rating"), 
+    starSize: 42,
     rateCallback:function rateCallback(rating, done) {
+        //This will be called when the rating is set
         this.setRating(rating); 
         done(); 
     }
 });
 
-window.raterJs({
-    element:document.querySelector("#step"),
-    rateCallback:function rateCallback(rating, done) {
-        this.setRating(rating); 
-        done(); 
-    },
-    starSize:32,
-    step:0.5
-})
-window.raterJs({
-    element:document.querySelector("#unli1"),
-    rateCallback:function rateCallback(rating, done) {
-        this.setRating(rating); 
-        done(); 
-    },
-    starSize:32,
-    max:10, 
-    step:0.5
-})
-window.raterJs({
-    element:document.querySelector("#unli2"),
-    rateCallback:function rateCallback(rating, done) {
-        this.setRating(rating); 
-        done(); 
-    },
-    starSize:32,
-    max:16, 
-    step:0.5
+
+$("#rateConfirm").click(function(){
+    //TODO: send to db
+
+    //This will return the rating submitted
+    rater.getRating()
+
+    //This will clear the rating from the modal
+    //(because it gets stuck to the previous rating)
+    rater.clear()
+
+    //This will replace the button 
 })
