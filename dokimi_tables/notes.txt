@@ -1,5 +1,5 @@
 sto customer mode
-trapezaki -> on click open modal gia na kameis reservation
+trapezaki -> on click open modal gia na kameis reservation?
 
 sign in to continue pu enashei? -> sto make a reservation tu xe3
 
@@ -16,4 +16,8 @@ apories gia to fabric
 	ena kamw objects?
 	an kamw objects ennaxw ena object gia kathe prama
 	e ena kamw ena include gia kathe object mestin html?
+
+table capacity
 	
+jumbo
+shionia preparation
