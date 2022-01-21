@@ -3,8 +3,8 @@ var rater = window.raterJs({
     starSize: 42,
     rateCallback:function rateCallback(rating, done) {
         //This will be called when the rating is set
-        this.setRating(rating); 
-        done(); 
+        this.setRating(rating)
+        done()
     }
 });
 
