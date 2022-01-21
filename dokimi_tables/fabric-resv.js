@@ -1,7 +1,7 @@
 // Defaults
 let canvas
 const grid = 30
-const backgroundColor = '#f8f8f8'
+const backgroundColor = '#ffe4c4'
 const lineStroke = '#ebebeb'
 const tableFill = 'rgba(150, 111, 51, 0.7)'
 const tableStroke = '#694d23'
@@ -13,6 +13,18 @@ const barFill = 'rgba(0, 93, 127, 0.7)'
 const barStroke = '#003e54'
 const barShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
 const barText = 'Bar'
+const entranceFill = 'rgba(0,255,0,0.3)'
+const entranceStroke = '#003e54'
+const entranceShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
+const entranceText = 'Main Entrance'
+
+const exitFill = 'rgba(255,0,0,0.3)'
+const exitStroke = '#003e54'
+const exitShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
+const exitText = 'Exit'
+
+//rgba(0,255,0,0.3)
+
 const wallFill = 'rgba(136, 136, 136, 0.7)'
 const wallStroke = '#686868'
 const wallShadow = 'rgba(0, 0, 0, 0.4) 5px 5px 20px'
@@ -325,6 +337,72 @@ function addBar(left, top, width, height) {
   canvas.add(g)
   return g
 }
+//We still need a button to add an entrance, for now this is overhead
+function addEntrance(left, top, width, height) {
+  const o = new fabric.Rect({
+    width: width,
+    height: height,
+    fill: entranceFill,
+    stroke: entranceStroke,
+    strokeWidth: 2,
+    shadow: entranceShadow,
+    originX: 'center',
+    originY: 'center',
+    type: 'entrance',
+    id: generateId()
+  })
+  const t = new fabric.IText(entranceText, {
+    fontFamily: 'Calibri',
+    fontSize: 14,
+    fill: '#fff',
+    textAlign: 'center',
+    originX: 'center',
+    originY: 'center'
+  })
+  const g = new fabric.Group([o, t], {
+    left: left,
+    top: top,
+    centeredRotation: true,
+    snapAngle: 45,
+    selectable: true,
+    type: 'entrance'
+  })
+  canvas.add(g)
+  return g
+}
+
+function addExit(left, top, width, height) {
+  const o = new fabric.Rect({
+    width: width,
+    height: height,
+    fill: exitFill,
+    stroke: exitStroke,
+    strokeWidth: 2,
+    shadow: exitShadow,
+    originX: 'center',
+    originY: 'center',
+    type: 'exit',
+    id: generateId()
+  })
+  const t = new fabric.IText(exitText, {
+    fontFamily: 'Calibri',
+    fontSize: 14,
+    fill: '#fff',
+    textAlign: 'center',
+    originX: 'center',
+    originY: 'center'
+  })
+  const g = new fabric.Group([o, t], {
+    left: left,
+    top: top,
+    centeredRotation: true,
+    snapAngle: 45,
+    selectable: true,
+    type: 'exit'
+  })
+  canvas.add(g)
+  return g
+}
 
 function addWall(left, top, width, height) {
   const o = new fabric.Rect({
@@ -424,6 +502,7 @@ document.querySelectorAll('.bar')[0].addEventListener('click', function () {
   canvas.setActiveObject(o)
 })
 
+
 document.querySelectorAll('.wall')[0].addEventListener('click', function () {
   const o = addWall(0, 0, 60, 180)
   canvas.setActiveObject(o)
@@ -448,7 +527,8 @@ document.querySelectorAll('.customer-mode')[0].addEventListener('click', functio
     o.hasControls = false
     o.lockMovementX = true
     o.lockMovementY = true
-    if (o.type === 'chair' || o.type === 'bar' || o.type === 'wall') {
+    if (o.type === 'chair' || o.type === 'bar' || o.type === 'wall' || o.type === 'entrance'
+        || o.type === 'exit') {
       o.selectable = false
     }
     o.borderColor = '#38A62E'
@@ -469,7 +549,8 @@ document.querySelectorAll('.admin-mode')[0].addEventListener('click', function (
     o.hasControls = true
     o.lockMovementX = false
     o.lockMovementY = false
-    if (o.type === 'chair' || o.type === 'bar' || o.type === 'wall') {
+    if (o.type === 'chair' || o.type === 'bar' || o.type === 'wall' || o.type === 'entrance'
+        || o.type === 'exit') {
       o.selectable = true
     }
     o.borderColor = 'rgba(102, 153, 255, 0.75)'
@@ -577,6 +658,10 @@ function addDefaultObjects() {
   addRect(210, 630, 90, 60)
 
   addBar(120, 0, 180, 60)
+
+  addEntrance(120, 0, 180, 60)
+
+  addExit(120, 0, 180, 60)
 
   addWall(120, 510, 60, 60)
 }
