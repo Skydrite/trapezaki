@@ -13,6 +13,7 @@ const barFill = 'rgba(0, 93, 127, 0.7)'
 const barStroke = '#003e54'
 const barShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
 const barText = 'Bar'
+//Entrance and exit added
 const entranceFill = 'rgba(0,255,0,0.3)'
 const entranceStroke = '#003e54'
 const entranceShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
@@ -659,9 +660,9 @@ function addDefaultObjects() {
 
   addBar(120, 0, 180, 60)
 
-  addEntrance(120, 0, 180, 60)
+  addEntrance(600, 0, 180, 60)
 
-  addExit(120, 0, 180, 60)
+  addExit(400, 0, 180, 60)
 
   addWall(120, 510, 60, 60)
 }
