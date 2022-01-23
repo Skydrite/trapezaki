@@ -9,6 +9,19 @@ $(document).ready(function () {
         $("#issueModal").modal('show')
     })
 
+    //Popup a confirmation windows when a reservation is to be cancelled
+    $("#modCancel").click(function(){
+        $("#confirmModal").modal("show");
+    })
+
+    $("#confirmed").click(function(){
+        //TODO: send data to the database
+        //TODO: remove the record from the table, ajax?
+        //TODO: send email pu ton server
+        $("#issueModal").modal('hide')
+        alert("TODO THIS (in reservations.js)")
+    })
+
     //On click sto modify reservvation tu modal
     $("#modResv").click(function () {
         window.location.href = "user2-editres.html";
