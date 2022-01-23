@@ -4,3 +4,19 @@
 
 
 - organise ta images eshi 2 fakelus
+
+user3-selected-profile
+    fix title na erkete aftomata me q?id=23324
+    fix photos na piennis brosta piso
+    fix to popup na checkarei an ise signed in j meta na kamni pop
+    fix na liturgi kanonika to sign in
+
+
+user3-reservations
+    to rate now na men kamnei wrap
+    otan kameis rate na gini replace me rating added
+    ta upcoming reservations na exun modal popup me parapanw details? or not?
+    cancel reservation
+
+user3-search
+    na pathkiete ullo to card tu magaziou j na se perni so user3-selected-profile

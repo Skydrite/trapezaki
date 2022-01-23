@@ -17,7 +17,6 @@ apories gia to fabric
 	an kamw objects ennaxw ena object gia kathe prama
 	e ena kamw ena include gia kathe object mestin html?
 
-table capacity
+table capacity -> otan kameis click new table na kamnei popup na zita capacity
 	
-jumbo
 shionia preparation
