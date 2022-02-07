@@ -97,15 +97,17 @@
                                                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link active" id="upcoming-tab"
-                                                                            data-bs-toggle="tab" href="#upcoming" role="tab"
-                                                                            aria-controls="upcoming"
+                                                                            data-bs-toggle="tab" href="#upcoming"
+                                                                            role="tab" aria-controls="upcoming"
                                                                             aria-selected="false">Upcoming</a>
                                                                     </li>
                                                                     <li class="nav-item" role="presentation">
                                                                         <a class="nav-link" id="completed-tab"
                                                                             data-bs-toggle="tab" href="#completed"
                                                                             role="tab" aria-controls="completed"
-                                                                            aria-selected="false">Completed <span class="badge bg-info" id="notification"></span></a>
+                                                                            aria-selected="false">Completed <span
+                                                                                class="badge bg-info"
+                                                                                id="notification"></span></a>
                                                                     </li>
                                                                 </ul>
                                                                 <div class="tab-content" id="myTabContent">
@@ -190,8 +192,10 @@
                                                                                         <td>Bordello</td>
                                                                                         <td>5/10/2022</td>
                                                                                         <td>
-                                                                                            <div class="col-md-5 col-12">
-                                                                                                <button class="btn text-nowrap btn-outline-info btn-sm btn-block rate">Rate
+                                                                                            <div
+                                                                                                class="col-md-5 col-12">
+                                                                                                <button
+                                                                                                    class="btn text-nowrap btn-outline-info btn-sm btn-block rate">Rate
                                                                                                     Now!</button>
                                                                                             </div>
                                                                                         </td>
@@ -200,7 +204,8 @@
                                                                                         <td>Gwnia</td>
                                                                                         <td>13/3/2022</td>
                                                                                         <td>
-                                                                                            <div class="col-md-5 col-12">
+                                                                                            <div
+                                                                                                class="col-md-5 col-12">
                                                                                                 <button
                                                                                                     class="btn text-nowrap btn-outline-info btn-sm btn-block rate">Rate
                                                                                                     Now!</button>
@@ -217,12 +222,15 @@
                                                                                         <td>3/1/2022</td>
                                                                                         <td>Rating added</td>
                                                                                     </tr>
-                                                                                    <tr class="resvPopup" id="5" >
+                                                                                    <tr class="resvPopup" id="5">
                                                                                         <td>Theoria kai Praxi</td>
                                                                                         <td>19/1/2022</td>
                                                                                         <td>
-                                                                                            <div class="col-md-5 col-12">
-                                                                                                <button class="btn text-nowrap btn-outline-info btn-sm btn-block rate">Rate Now!</button>
+                                                                                            <div
+                                                                                                class="col-md-5 col-12">
+                                                                                                <button
+                                                                                                    class="btn text-nowrap btn-outline-info btn-sm btn-block rate">Rate
+                                                                                                    Now!</button>
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>
@@ -250,7 +258,7 @@
                 </div>
             </div>
 
-            <!--small size modal -->
+            <!-- rating modal -->
             <div class="modal fade text-left" id="small" tabindex="-1" role="dialog" aria-labelledby="myModalLabel19"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
@@ -269,14 +277,120 @@
                             <button type="button" class="btn btn-light-secondary btn-sm" data-bs-dismiss="modal">
                                 <span class="d-sm-block">Close</span>
                             </button>
-                            <button type="button" id="rateConfirm" class="btn btn-primary ml-1 btn-sm" data-bs-dismiss="modal">
+                            <button type="button" id="rateConfirm" class="btn btn-primary ml-1 btn-sm"
+                                data-bs-dismiss="modal">
                                 Confirm
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- small size modal end-->
+            <!-- rating modal end-->
+
+
+            <!-- Reservation modal starts here-->
+            <div class="modal fade" id="myresvModal" tabindex="-1" role="dialog" aria-labelledby="myresvModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
+                    role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myresvModalCenterTitle">Reservation Details
+                            </h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">x
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- body here-->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="flex-nowrap input-group col-md-5 mb-4">
+                                            <label class="input-group-text" for="myresvBusiness">Reservation No.</label>
+                                            <label type="text" class="form-control" id="myresvBusiness">35234</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-10">
+                                        <div class="flex-nowrap input-group col-md-5 mb-4">
+                                            <label class="input-group-text" for="myresvBusiness">Name</label>
+                                            <label type="text" class="form-control" id="myresvBusiness">Efstathios
+                                                Andreou</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-10">
+                                        <div class="flex-nowrap input-group col-md-5 mb-4">
+                                            <label class="input-group-text" for="myresvBusiness">Phone
+                                                Number</label>
+                                            <label type="text" class="form-control" id="myresvBusiness">99081329</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-5">
+                                        <div class="d-flex input-group col-md-3 mb-3">
+                                            <label class="input-group-text" for="myresvType">Table</label>
+                                            <div class="col-4">
+                                                <label type="text" class="form-control" id="myresvType">4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 mb-1">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">People</span>
+                                            <div class="col-4">
+                                                <input type="number" id="attendance" min="0" max="4"
+                                                    class="form-control" value="0">
+                                            </div>
+                                            <span class="input-group-text">/4</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="col-md-4 mb-4">
+                                            <div class="input-group mb-4">
+                                                <label class="input-group-text" for="myresvImportance">Time</label>
+                                                <label type="text" class="form-control"
+                                                    id="myresvImportance">18:00</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+                                    <div class="card">
+                                        <h7 class="" for="myresvTextArea">Description</h7>
+                                        <label class="form-control" id="myresvTextArea">The description
+                                            will be
+                                            written here and might be a long one but it doenst matter
+                                            because the lines can wrap and the modal can scroll down as
+                                            much
+                                            as you want so that you can see the details written by the
+                                            customer.</label>
+                                    </div>
+
+                                    <div class="col-sm-12 d-flex form-group">
+                                        <form class="col">
+                                            <input type="button" id="modResv" class="btn btn-light-secondary"
+                                                value="Modify" />
+                                            <input type="button" id="modCancel" class="btn btn-light-secondary"
+                                                value="Cancel" />
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                <span class="d-block d-sm-block">Close</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reservation Modal Ends Here-->
 
             <footer>
 

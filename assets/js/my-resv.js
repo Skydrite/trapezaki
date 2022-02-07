@@ -31,6 +31,8 @@ $("#rateConfirm").click(function(){
     //raterow.parent().attr("id")
 })
 
+$("myresvModal").modal('show')
+
 })
 
 
