@@ -114,146 +114,152 @@
                 </a>
             </header>
 
-            
+
             <section class="section">
-            <div class="card">
-                
-                <div class="card-content">
-                    <div class="card-body">
-                        <h3>Previous Issues</h3>
-                        <div class="row">
-                            <!-- Hoverable rows start -->
-                            <section class="section">
-                                <div class="row" id="table-hover-row">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                </div>
-                                                <!-- table hover -->
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover mb-0" id="resTable">
-                                                        <thead>
-                                                            <tr>
-                                                                <!-- <th>ResNum</th> -->
-                                                                <th>Date</th>
-                                                                <th>Type</th>
-                                                                <th>Status</th>
-                                                                <!-- Analogws me ti ena epileksei na tu fkallei to analogo text -->
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="resvPopup">
-                                                                <td class="date">25/02/2020</td>
+                <div class="card">
+
+                    <div class="card-content">
+                        <div class="card-body">
+                            <h3>Previous Problems</h3>
+                            <div class="row">
+                                <!-- Hoverable rows start -->
+                                <section class="section">
+                                    <div class="row" id="table-hover-row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                    </div>
+                                                    <!-- table hover -->
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover mb-0" id="probTable">
+                                                            <thead>
+                                                                <tr>
+                                                                    <!-- <th>ResNum</th> -->
+                                                                    <th>Date</th>
+                                                                    <th>Type</th>
+                                                                    <th>Status</th>
+                                                                    <!-- Analogws me ti ena epileksei na tu fkallei to analogo text -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="probPopup">
+                                                                    <td class="date">25/02/2020</td>
                                                                     <td class="type">Technical</td>
                                                                     <td>
                                                                         <span class="status">Solved</span>
                                                                     </td>
 
-                                                            </tr>
-                                                            <tr class="resvPopup">
-                                                                <td class="date">25/02/2020</td>
+                                                                </tr>
+                                                                <tr class="probPopup">
+                                                                    <td class="date">25/02/2020</td>
                                                                     <td class="type">Technical</td>
                                                                     <td>
                                                                         <span class="status">Solved</span>
                                                                     </td>
 
-                                                            </tr>
-                                                            <tr class="resvPopup">
-                                                                <td class="date">05/02/2020</td>
+                                                                </tr>
+                                                                <tr class="probPopup">
+                                                                    <td class="date">05/02/2020</td>
                                                                     <td class="type">Design</td>
                                                                     <td>
                                                                         <span class="status">Solved</span>
                                                                     </td>
 
-                                                            </tr>
-                                                            <tr class="resvPopup">
-                                                                <td class="date">10/02/2020</td>
+                                                                </tr>
+                                                                <tr class="probPopup">
+                                                                    <td class="date">10/02/2020</td>
                                                                     <td class="type">Technical</td>
                                                                     <td>
                                                                         <span class="status">Solved</span>
                                                                     </td>
 
-                                                            </tr>
-                                                            <tr class="resvPopup">
-                                                                <td class="date">22/02/2020</td>
+                                                                </tr>
+                                                                <tr class="probPopup">
+                                                                    <td class="date">22/02/2020</td>
                                                                     <td class="type">Technical</td>
                                                                     <td>
                                                                         <span class="status">Solved</span>
                                                                     </td>
 
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </section>
-                            <!-- Hoverable rows end -->
-                            
+                                </section>
+                                <!-- Hoverable rows end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        
+            <!-- Modal starts here-->
+            <div class="modal fade" id="probModal" tabindex="-1" role="dialog" aria-labelledby="probModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
+                    role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="probModalCenterTitle">Problem Details
+                            </h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                x
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- body here-->
+                            <div class="card-body">
+                                <div class="row">
 
-                            <!-- Reservation modal starts here-->
-                            <div class="modal fade" id="issueModal" tabindex="-1" role="dialog"
-                                aria-labelledby="issueModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
-                                    role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="issueModalCenterTitle">Details
-                                            </h5>
-                                            <button type="button" class="close" data-bs-dismiss="modal"
-                                                aria-label="Close">x
-                                            </button>
+                                    <div class="col-sm-7">
+                                        <div class="d-flex input-group col-md-5 mb-4">
+                                            <label class="input-group-text" for="issueType">Type</label>
+                                            <label type="text" class="form-control" id="issueType">Design
+                                                Preference</label>
                                         </div>
-                                        <div class="modal-body">
-                                            <!-- body here-->
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="card">
-                                                        
-                                                        <label class="form-control" id="issueTextArea">The description
-                                                            will be
-                                                            written here and might be a long one but it doenst matter
-                                                            because the lines can wrap and the modal can scroll down as
-                                                            much
-                                                            as you want so that you can see the details written by the
-                                                            customer.</label>
-                                                    </div>
+                                    </div>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-light-secondary" 
-                                                data-bs-dismiss="modal">
-                                                <span class="d-block d-sm-block">Close</span>
-                                            </button>
-                                        </div>
+                                    <br>
+                                    <br>
+                                    <div class="card">
+                                        <h4 class="card-title" for="issueTextArea">Details</h4>
+                                        <label class="form-control" id="issueTextArea">The issue
+                                            will be
+                                            written here and might be a long one but it doenst
+                                            matter
+                                            because the lines can wrap and the modal can scroll down
+                                            as much
+                                            as you want so that you can see the details written by
+                                            the
+                                            business.</label>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
-                        
-
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                <span class="d-sm-block">Close</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-
-
-
-        <footer>
-
-        </footer>
-    </div>
     </div>
 </body>
+
+
+<footer>
+</footer>
+
 
 </html>
 
@@ -265,6 +271,5 @@
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
-<script src="../assets/js/manage-resv-datatable.js"></script>
-<script src="../assets/js/date-no-prev.js"></script>
-<script src="../assets/js/reservations.js"></script>
+
+<script src="../assets/js/prev-issues.js"></script>

@@ -1,5 +1,6 @@
 // Datatable documentation on this is in
 // https://github.com/fiduswriter/Simple-DataTables/wiki/
+
 function data_resv(){
 let table = document.querySelector('#resTable');
 let dataTable = new simpleDatatables.DataTable(table, {
