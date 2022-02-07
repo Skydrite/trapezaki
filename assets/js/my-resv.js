@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
 var raterow;
 
 //Update notifications
@@ -30,7 +31,10 @@ $("#rateConfirm").click(function(){
     //raterow.parent().attr("id")
 })
 
-$("myresvModal").modal('show')
+$(".resvPopup").click(function(){
+    $("#myresvModal").modal('show');
+})
+
 
 })
 

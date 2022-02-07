@@ -289,8 +289,8 @@
 
 
             <!-- Reservation modal starts here-->
-            <div class="modal fade" id="myresvModal" tabindex="-1" role="dialog" aria-labelledby="myresvModalCenterTitle"
-                aria-hidden="true">
+            <div class="modal fade" id="myresvModal" tabindex="-1" role="dialog"
+                aria-labelledby="myresvModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
                     role="document">
                     <div class="modal-content">
@@ -311,22 +311,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-10">
-                                        <div class="flex-nowrap input-group col-md-5 mb-4">
-                                            <label class="input-group-text" for="myresvBusiness">Name</label>
-                                            <label type="text" class="form-control" id="myresvBusiness">Efstathios
-                                                Andreou</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-10">
-                                        <div class="flex-nowrap input-group col-md-5 mb-4">
-                                            <label class="input-group-text" for="myresvBusiness">Phone
-                                                Number</label>
-                                            <label type="text" class="form-control" id="myresvBusiness">99081329</label>
-                                        </div>
-                                    </div>
-
                                     <div class="col-sm-5">
                                         <div class="d-flex input-group col-md-3 mb-3">
                                             <label class="input-group-text" for="myresvType">Table</label>
@@ -337,13 +321,11 @@
                                     </div>
 
                                     <div class="col-sm-6 mb-1">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text">People</span>
+                                        <div class="input-group mb-3 col-md-3">
+                                            <label class="input-group-text" for="myresvType">People</label>
                                             <div class="col-4">
-                                                <input type="number" id="attendance" min="0" max="4"
-                                                    class="form-control" value="0">
+                                                <label type="text" class="form-control col-3" id="myresvType">4</label>
                                             </div>
-                                            <span class="input-group-text">/4</span>
                                         </div>
                                     </div>
 
@@ -360,7 +342,7 @@
                                     <br>
                                     <br>
                                     <div class="card">
-                                        <h7 class="" for="myresvTextArea">Description</h7>
+                                        <h7 class="" for="myresvTextArea">Details</h7>
                                         <label class="form-control" id="myresvTextArea">The description
                                             will be
                                             written here and might be a long one but it doenst matter
@@ -370,22 +352,25 @@
                                             customer.</label>
                                     </div>
 
-                                    <div class="col-sm-12 d-flex form-group">
-                                        <form class="col">
-                                            <input type="button" id="modResv" class="btn btn-light-secondary"
-                                                value="Modify" />
-                                            <input type="button" id="modCancel" class="btn btn-light-secondary"
-                                                value="Cancel" />
-                                        </form>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                <span class="d-block d-sm-block">Close</span>
-                            </button>
+                        <div class="modal-footer justify-content-start">
+                            <div class="d-flex col-12">
+                        
+                                <div class="col-5">
+                                    <button type="button" id="modCancel" class="btn btn-light-secondary">
+                                        <span class="d-block d-sm-block">Cancel Reservation</span>
+                                    </button>
+                                </div>
+                        
+                                <div class="d-flex justify-content-end col-7">
+                                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                        <span class="d-block d-sm-block">Close</span>
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
