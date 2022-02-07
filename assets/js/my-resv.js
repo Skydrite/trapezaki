@@ -26,7 +26,6 @@ $("#rateConfirm").click(function(){
     //Update the notification
     notification_update()
 
-
     //Get the row id that is selected (useful for db)
     //raterow.parent().attr("id")
 })
@@ -36,7 +35,7 @@ $("myresvModal").modal('show')
 })
 
 
-
+//Function to show the number of pending ratings
 function notification_update(){
     var num;
     //Find number of buttons shown
@@ -55,3 +54,30 @@ function notification_update(){
     
 
 }
+
+//Rater spawn
+var rater = window.raterJs({
+    element: document.querySelector("#rating"), 
+    starSize: 42,
+    rateCallback:function rateCallback(rating, done) {
+        //This will be called when the rating is set
+        this.setRating(rating)
+        done()
+    }
+});
+
+
+//Function when rating is confirmed
+$("#rateConfirm").click(function(){
+    //TODO: send to db
+
+    //This will return the rating submitted
+    rater.getRating()
+
+})
+
+//This will clear the rating from the modal when closed
+//(because it gets stuck to the previous rating)
+$("#small").on('hidden.bs.modal', function(){
+    rater.clear()
+})
