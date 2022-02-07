@@ -90,8 +90,12 @@
                                     <h5 class="font-bold text-nowrap">CAFE John Duck</h5>
                                 </div>
                                 <div class="container">
-                                    <input class="btn btn-primary" type="button" id="btnBack" value="Go Back"
+                                    <button class="btn btn-light-secondary" type="button" id="btnBack"
                                         style="float: right;">
+                                        <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                            <use xlink:href="../assets/vendors/bootstrap-icons/bootstrap-icons.svg#arrow-left-circle-fill"></use>
+                                        </svg>
+                                        Back</button>
                                 </div>
                             </div>
 
@@ -121,7 +125,7 @@
                                         <div class="col-sm-12 d-flex justify-content-center">
                                             <form></form>
                                                 <button class="btn btn-primary" id="btnBook" style="margin:5px;"> Book Now</button>
-                                                <button class="btn btn-primary" style="margin:5px;">Menu</button>
+                                                <button class="btn btn-primary" style="margin:5px;" id="resvMenu" >Menu</button>
                                             </form>
                                         </div>
                                     </div>
@@ -240,6 +244,10 @@
                                         <label>Phone: </label>
                                         <div class="form-group">
                                             <input type="text" placeholder="Phone Number" class="form-control">
+                                        </div>
+                                        <label>Email: </label>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="example@example.com" class="form-control">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
