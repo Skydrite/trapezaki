@@ -35,6 +35,9 @@ $(".resvPopup").click(function(){
     $("#myresvModal").modal('show');
 })
 
+$("#modCancel").click(function(){
+    $("#confirmModal").modal('show');
+})
 
 })
 
