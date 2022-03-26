@@ -38,109 +38,94 @@ let canvasEl = document.getElementById('canvas')
 
 
 // Canvas initialization and methods
-// function initCanvas() {
-if (canvas) {
-  canvas.clear()
-  canvas.dispose()
-}
+function initCanvas() {
+  if (canvas) {
+    canvas.clear()
+    canvas.dispose()
+  }
 
-canvas = new fabric.Canvas('canvas')
-// number = 1
-// canvas.backgroundColor = backgroundColor
-// canvas.allow
-// canvas.allowTouchScrolling = true
-// //TODO DOKIMI APLA
-canvas.selection = false;
+  canvas = new fabric.Canvas('canvas', { allowTouchScrolling: false })
+  number = 1
+  canvas.backgroundColor = backgroundColor
+  canvas.allow
 
+  for (let i = 0; i < (canvas.height / grid); i++) {
+    const lineX = new fabric.Line([0, i * grid, canvas.height, i * grid], {
+      stroke: lineStroke,
+      selectable: false,
+      type: 'line'
+    })
+    const lineY = new fabric.Line([i * grid, 0, i * grid, canvas.height], {
+      stroke: lineStroke,
+      selectable: false,
+      type: 'line'
+    })
+    sendLinesToBack()
+    canvas.add(lineX)
+    canvas.add(lineY)
+  }
 
+canvas.on('object:moving', function (e) {
+  snapToGrid(e.target)
+})
 
-canvas.on({
-
-  'mouse:wheel': function (opt) {
-    if (opt.ctrlKey) {
-      alert('zooming');
-    }
-    var delta = opt.e.deltaY;
-    var zoom = canvas.getZoom();
-    zoom *= 0.999 ** delta;
-
-    //Zoom constraints
-    if (zoom > 3) zoom = 3;
-    if (zoom < 0.3) zoom = 0.3;
-
-    canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
-    opt.e.preventDefault();
-    opt.e.stopPropagation();
-  },
-
-});
-
-
-var pausePanning = false;
-var lastX, lastY;
-
-canvas.on({
-  'selection:created': function () {
-    pausePanning = true;
-  },
-  'selection:cleared': function () {
-    pausePanning = false;
-  },
-  'touch:gesture': function (e) {
-    if (e.e.touches && e.e.touches.length == 2) {
-      pausePanning = true;
-      var point = new fabric.Point(e.self.x, e.self.y);
-      if (e.self.state == "start") {
-        zoomStartScale = canvas.getZoom();
-      }
-      var delta = zoomStartScale * e.self.scale;
-      canvas.zoomToPoint(point, delta);
-      pausePanning = false;
-    }
-  },
-  'touch:drag': function (e) {
-    this.isDragging = true;
-    this.selection = false;
-
-    if (pausePanning == false && undefined != e.self.x && undefined != e.self.x) {
-      currentX = e.self.x;
-      currentY = e.self.y;
-      xChange = currentX - lastX;
-      yChange = currentY - lastY;
-
-      if ((Math.abs(currentX - lastX) <= 50) && (Math.abs(currentY - lastY) <= 50)) {
-        var delta = new fabric.Point(xChange, yChange);
-        canvas.relativePan(delta);
-      }
-
-      lastX = e.self.x;
-      lastY = e.self.y;
+canvas.on('object:scaling', function (e) {
+  if (e.target.scaleX > 5) {
+    e.target.scaleX = 5
+  }
+  if (e.target.scaleY > 5) {
+    e.target.scaleY = 5
+  }
+  if (!e.target.strokeWidthUnscaled && e.target.strokeWidth) {
+    e.target.strokeWidthUnscaled = e.target.strokeWidth
+  }
+  if (e.target.strokeWidthUnscaled) {
+    e.target.strokeWidth = e.target.strokeWidthUnscaled / e.target.scaleX
+    if (e.target.strokeWidth === e.target.strokeWidthUnscaled) {
+      e.target.strokeWidth = e.target.strokeWidthUnscaled / e.target.scaleY
     }
   }
 })
 
 
+canvas.on('object:modified', function (e) {
+  e.target.scaleX = e.target.scaleX >= 0.25 ? (Math.round(e.target.scaleX * 2) / 2) : 0.5
+  e.target.scaleY = e.target.scaleY >= 0.25 ? (Math.round(e.target.scaleY * 2) / 2) : 0.5
+  snapToGrid(e.target)
+  if (e.target.type === 'table') {
+    canvas.bringToFront(e.target)
+  }
+  else {
+    canvas.sendToBack(e.target)
+  }
+  sendLinesToBack()
+})
+
+canvas.observe('object:moving', function (e) {
+  checkBoudningBox(e)
+})
+canvas.observe('object:rotating', function (e) {
+  checkBoudningBox(e)
+})
+canvas.observe('object:scaling', function (e) {
+  checkBoudningBox(e)
+})
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Listeners to automate canvas resize
+widthEl.addEventListener('change', () => {
+  resizeCanvas()
+  initCanvas()
+})
+heightEl.addEventListener('change', () => {
+  resizeCanvas()
+  initCanvas()
+})
 
 
 //Functions to calculate the next table number
@@ -172,6 +157,16 @@ function NextTableNo() {
 }
 
 
+//Canvas resize function
+function resizeCanvas() {
+  widthEl = document.getElementById('width')
+  heightEl = document.getElementById('height')
+  canvasEl.width = widthEl.value ? widthEl.value : 812
+  canvasEl.height = heightEl.value ? heightEl.value : 812
+  const canvasContainerEl = document.querySelectorAll('.canvas-container')[0]
+  canvasContainerEl.style.width = canvasEl.width
+  canvasContainerEl.style.height = canvasEl.height
+}
 
 //Function to generate an element ID, this might change when db is done
 function generateId() {
@@ -436,7 +431,13 @@ function addWall(left, top, width, height) {
 
 
 
-
+//Help function for element modification
+function snapToGrid(target) {
+  target.set({
+    left: Math.round(target.left / (grid / 2)) * grid / 2,
+    top: Math.round(target.top / (grid / 2)) * grid / 2
+  })
+}
 
 //Help function for element modification
 function checkBoudningBox(e) {
@@ -466,6 +467,14 @@ function checkBoudningBox(e) {
   }
 }
 
+//Gridlines help function
+function sendLinesToBack() {
+  canvas.getObjects().map(o => {
+    if (o.type === 'line') {
+      canvas.sendToBack(o)
+    }
+  })
+}
 
 
 //Element buttons listeners
@@ -513,13 +522,131 @@ document.querySelectorAll('.remove')[0].addEventListener('click', function () {
   }
 })
 
+//Customer mode button listener
+document.querySelectorAll('.customer-mode')[0].addEventListener('click', function () {
+  canvas.getObjects().map(o => {
+    o.hasControls = false
+    o.lockMovementX = true
+    o.lockMovementY = true
+    if (o.type === 'chair' || o.type === 'bar' || o.type === 'wall' || o.type === 'entrance'
+      || o.type === 'exit') {
+      o.selectable = false
+    }
+    o.borderColor = '#38A62E'
+    o.borderScaleFactor = 2.5
+  })
+  canvas.selection = false
+  canvas.hoverCursor = 'pointer'
+  canvas.discardActiveObject()
+  canvas.renderAll()
+  document.querySelectorAll('.admin-menu')[0].style.display = 'none'
+  document.querySelectorAll('.customer-menu')[0].style.display = 'block'
+})
 
 
+//Admin mode button listener
+document.querySelectorAll('.admin-mode')[0].addEventListener('click', function () {
+  canvas.getObjects().map(o => {
+    o.hasControls = true
+    o.lockMovementX = false
+    o.lockMovementY = false
+    if (o.type === 'chair' || o.type === 'bar' || o.type === 'wall' || o.type === 'entrance'
+      || o.type === 'exit') {
+      o.selectable = true
+    }
+    o.borderColor = 'rgba(102, 153, 255, 0.75)'
+    o.borderScaleFactor = 1
+  })
+  canvas.selection = true
+  canvas.hoverCursor = 'move'
+  canvas.discardActiveObject()
+  canvas.renderAll()
+  document.querySelectorAll('.admin-menu')[0].style.display = 'block'
+  document.querySelectorAll('.customer-menu')[0].style.display = 'none'
+})
 
 
+//Submit button functionality
+document.querySelectorAll('.submit')[0].addEventListener('click', function () {
+  const obj = canvas.getActiveObject()
+  $('#modal').modal('show')
+  let modalText = 'You have not selected anything'
+  if (obj) {
+    modalText = 'You have selected table ' + obj.number + ', time: ' + formatTime(slider.noUiSlider.get())
+  }
+  document.querySelectorAll('#modal-table-id')[0].innerHTML = modalText
+})
+
+
+//Time help function for the slider functionality
+function formatTime(val) {
+  const hours = Math.floor(val / 60)
+  const minutes = val % 60
+  const englishHours = hours > 12 ? hours - 12 : hours
+
+  const normal = hours + ':' + minutes + (minutes === 0 ? '0' : '')
+  const english = englishHours + ':' + minutes + (minutes === 0 ? '0' : '') + ' ' + (hours > 12 ? 'PM' : 'AM')
+
+  return normal + ' (' + english + ')'
+}
+
+
+//This is the time slider functionality in customer mode
+const slider = document.getElementById('slider')
+noUiSlider.create(slider, {
+  start: 1200,
+  step: 15,
+  connect: 'lower',
+  range: {
+    min: 0,
+    max: 1425
+  }
+})
+
+const sliderValue = document.getElementById('slider-value')
+slider.noUiSlider.on('update', function (values, handle) {
+  sliderValue.innerHTML = formatTime(values[handle])
+})
 
 //The objects that adds when the screen is ready
 function addDefaultObjects() {
+  addChair(15, 105)
+  addChair(15, 135)
+  addChair(75, 105)
+  addChair(75, 135)
+  addChair(225, 75)
+  addChair(255, 75)
+  addChair(225, 135)
+  addChair(255, 135)
+  addChair(225, 195)
+  addChair(255, 195)
+  addChair(225, 255)
+  addChair(255, 255)
+  addChair(15, 195)
+  addChair(45, 195)
+  addChair(15, 255)
+  addChair(45, 255)
+  addChair(15, 315)
+  addChair(45, 315)
+  addChair(15, 375)
+  addChair(45, 375)
+  addChair(225, 315)
+  addChair(255, 315)
+  addChair(225, 375)
+  addChair(255, 375)
+  addChair(15, 435)
+  addChair(15, 495)
+  addChair(15, 555)
+  addChair(15, 615)
+  addChair(225, 615)
+  addChair(255, 615)
+  addChair(195, 495)
+  addChair(195, 525)
+  addChair(255, 495)
+  addChair(255, 525)
+  addChair(225, 675)
+  addChair(255, 675)
+
   addRect(30, 90, 60, 90)
   addRect(210, 90, 90, 60)
   addRect(210, 210, 90, 60)
