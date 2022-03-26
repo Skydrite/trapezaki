@@ -1,5 +1,6 @@
 // Datatable documentation on this is in
 // https://github.com/fiduswriter/Simple-DataTables/wiki/
+
 function data_resv(){
 let table = document.querySelector('#resTable');
 let dataTable = new simpleDatatables.DataTable(table, {
@@ -18,6 +19,9 @@ let dataTable = new simpleDatatables.DataTable(table, {
 
 dataTable.on('datatable.sort', function(column, direction) {
     colorizeTable()
+
+    //Epd an to valume poupote allou en tha kamnei meta pu sort
+    $(".resvPopup").click(function () { $("#issueModal").modal('show')})
 });
 
 }

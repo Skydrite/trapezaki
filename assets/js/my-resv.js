@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
 var raterow;
 
 //Update notifications
@@ -28,6 +29,14 @@ $("#rateConfirm").click(function(){
 
     //Get the row id that is selected (useful for db)
     //raterow.parent().attr("id")
+})
+
+$(".resvPopup").click(function(){
+    $("#myresvModal").modal('show');
+})
+
+$("#modCancel").click(function(){
+    $("#confirmModal").modal('show');
 })
 
 })

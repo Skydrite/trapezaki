@@ -12,4 +12,9 @@ $(document).ready(function() {
         
         //TODO: after log in redirect
     })
+
+    $("#resvMenu").click(function(){
+        alert("TODO");
+        window.open("/TODO", '_blank').focus();
+    })
 })

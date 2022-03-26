@@ -2,7 +2,7 @@
 -popup issue submitted sto report_problem j issue not submitted
 -na eshi search gia reservations me date,name,username, irte or not sto manage reservations see table-datatable
 
-
+-na checkarume gia html injection 
 
 - sta sign in an patisun login xoris na ta simplirosun ulla na eshi toast "Oops! Something is missing" pu to extra-component-toastify
 
@@ -16,3 +16,12 @@
 - dashboard is hidden, na to fiume oksa?
 
 - to attendance prp na elegxetai pu ton server gia min j max
+
+
+user2-manage_reservations
+    to colorization na checkarei to date
+        an en simerino dulefki kanonika
+        an en pu simera j meta en dulefki
+        an en pu simera j prin dulefki xoris tin wra epd se ulla eperase i wra
+
+    reservation modal na sasun ta id

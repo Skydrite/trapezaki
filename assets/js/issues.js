@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-    //This means that with any element that starts with issue 
-    //(cuz i might have issue1,issue2)
+    
     $(".issueName").click(function () {
         //otan fernw ta data me ajax or laravel prp na fernw j to id etsi wste kathe fora
         //pu kamnei run tunto function na kamnw query to id j na allassw ta data tu modal
